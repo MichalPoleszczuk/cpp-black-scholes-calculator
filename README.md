@@ -6,8 +6,10 @@ I am in the process of building this project (options pricing calculator impleme
 
 ### Features that I have already implemented
 
-- user input for various option parameters, like: underlying inst. price or ttm
-- pricing of european calls and puts with the use of Black-Scholes 
+- user input for various option parameters, like: underlying stock price, strike price, time to maturity, risk-free rate, volatility and option type (call/put)
+- pricing of european calls and puts with the use of Black-Scholes model
+- Calculation of option Greeks (Delta, Gamma, Vega, Theta, Rho)
+- Outputting option data, prices, and Greeks to a CSV file (exemplary file for 15 instruments in the repository)
 
 ## Purpose
 
@@ -17,7 +19,7 @@ I build this project as an assignment for "Programming in C++" class at my unive
 
 ### In order to run, you will need
 
-- C++ compiler (e.g., g++)
+- C++ compiler (e.g., g++) with support for C++11 standard
 
 ### Installation
 
@@ -29,7 +31,7 @@ I build this project as an assignment for "Programming in C++" class at my unive
    cd cpp-black-scholes-calculator
 4. In order to compile:
    ```bash
-   g++ black-scholes-calculator.cpp -o options_pricing_calculator
+   g++ -std=c++11 black-scholes-calculator.cpp -o options_pricing_calculator
 5. To run:
    ```bash
    ./options_pricing_calculator
@@ -45,13 +47,10 @@ When you run the program, it will prompt you to enter the following parameters f
   - Volatility (sigma)
   - Option type (call/put)
 
-After entering the details, the program will calculate and display the price of the specified options using the Black-Scholes model.
+After entering the details, the program will calculate and display the price of the specified options using the Black-Scholes model. The newly added feature, calculates the Greeks for each option and display them (only if desired). The results can also be saved to a CSV file for further analysis and other business needs.
 
-### Features I will implement in the next following days/weeks 
+### If time allows, these are features that I will implement in the next following days/weeks 
 
   1. Additional pricing models (e.g., Binomial Tree Model)
-  2. Handling of a volatility surface
-  3. Calculation of option Greeks (Delta, Gamma, Vega, Theta, Rho)
-  4. Outputting data to CSV files
-  5. Visualization of option prices and Greeks
+  2. Visualization of option prices and Greeks
    
